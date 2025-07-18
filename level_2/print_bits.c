@@ -3,7 +3,7 @@
 void	print_bits(unsigned char octet)
 {
 	int	i = 8;
-	unsigned char	bits;
+	unsigned char	bits = 0;
 
 	while (i--)
 	{
