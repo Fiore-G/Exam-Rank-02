@@ -14,21 +14,22 @@ int	main(int argc, char **argv)
 		int	i = 0;
 		char	*str = argv[1];
 		int	spaces = 0;
-
-		while(ft_isspace(str[i]))
-			i++;
+		
 		while (str[i])
 		{
-			if (ft_isspace(str[i]))
-				spaces = 1;
-			if (!ft_isspace(str[i]))
+			while (ft_isspace(str[i]))
+				i++;
+			if (str[i])
 			{
 				if (spaces)
 					write(1, "   ", 3);
-				spaces = 0;
-				write(1, &str[i], 1);
+				while (str[i] && !ft_isspace(str[i]))
+				{
+					write(1, &str[i], 1);
+					i++;
+				}
+				spaces = 1;
 			}
-			i++;
 		}
 	}
 	write(1, "\n", 1);
