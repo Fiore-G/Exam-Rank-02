@@ -9,9 +9,9 @@ int	main(int argc, char **argv)
 		char	*s1 = argv[1];
 		char	*s2 = argv[2];
 
-		while (s2[j] && s1[i])
+		while (s1[i] && s2[j])
 		{
-			if (s2[j] == s1[i])
+			if (s1[i] == s2[j])
 				i++;
 			j++;
 		}			
