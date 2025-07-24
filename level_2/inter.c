@@ -18,6 +18,7 @@ int	main(int argc, char **argv)
 				{
 					check[c] = 1;
 					write(1, &argv[1][i], 1);
+					break ; //aqui salimos cuando escribimos el caracter
 				}
 				j++;
 			}
