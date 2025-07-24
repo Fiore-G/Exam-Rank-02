@@ -13,9 +13,10 @@ int	main(int argc, char **argv)
 			j = 0;
 			while (argv[2][j])
 			{
-				if (argv[1][i] == argv[2][j] && !check[(int)argv[2][j]])
+				unsigned char	c = argv[2][j];
+				if (argv[1][i] == argv[2][j] && !check[c])
 				{
-					check[(int)argv[2][j]] = 1;
+					check[c] = 1;
 					write(1, &argv[1][i], 1);
 				}
 				j++;
