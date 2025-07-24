@@ -2,7 +2,7 @@
 //#include <stddef.h>
 //#include <string.h>
 
-size_t	ft_strspn(const char *s, const char *charset)
+size_t	ft_strspn(const char *s, const char *accept)
 {
 	size_t	i = 0;
 	size_t	j;
@@ -10,13 +10,13 @@ size_t	ft_strspn(const char *s, const char *charset)
 	while (s[i])
 	{
 		j = 0;
-		while (charset[j])
+		while (accept[j])
 		{
-			if (s[i] == charset[j])
+			if (s[i] == accept[j])
 				break ;
 			j++;
 		}
-		if (!charset[j])
+		if (!accept[j])
 			break ;
 		i++;
 	}
