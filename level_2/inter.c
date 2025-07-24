@@ -1,10 +1,5 @@
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int	main(int argc, char **argv)
 {
 	if (argc == 3)
@@ -21,7 +16,7 @@ int	main(int argc, char **argv)
 				if (argv[1][i] == argv[2][j] && !check[(int)argv[2][j]])
 				{
 					check[(int)argv[2][j]] = 1;
-					ft_putchar(argv[2][j]);
+					write(1, &argv[1][i], 1);
 				}
 				j++;
 			}
