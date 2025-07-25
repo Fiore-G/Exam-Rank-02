@@ -15,7 +15,7 @@ void	rstr_capitalizer(char *str)
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] += 32;
-		if (str[i] >= 'a' && str[i] <= 'z' && ft_isspace(str[i + 1]) || str[i + 1] == '\0')
+		if ((str[i] >= 'a' && str[i] <= 'z') && (ft_isspace(str[i + 1]) || str[i + 1] == '\0'))
 			str[i] -= 32;
 		write(1, &str[i], 1);
 		i++;
